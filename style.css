@@ -1,0 +1,542 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Iceland", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  color: #0486FE;
+  font-size: 30px;
+  line-height: 1.8;
+   text-shadow: 1px 1px 5px #00639c;
+   cursor: context-menu;
+  margin: 0;
+  padding: 0;
+  background-color: #080f2d; /* Deep blue background */
+  color: #b0c4de; /* Light steel blue text */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff4500, #ffa500);
+  animation: randomMove 10s linear infinite;
+  z-index: -1;
+}
+
+
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    border: 0px;
+    border-radius: 400px;
+    align-items: center;
+    padding: 20px 40px;
+    position: sticky;
+    box-shadow: #00a2ff 2px 2px 2px;
+    top: 0;
+    z-index: 1;
+    transition: 1s ease-in-out;
+}
+header:hover{
+  box-shadow: #ff6600 2px 2px 2px;
+  transition: 0.5s;
+  border-radius: 0px;
+}
+
+
+header .logo {
+display: flex;
+align-items: center;
+}
+
+header .logo img {
+  width: 100px;
+  height: 60px;
+  margin-right: 10px;
+}
+header .logo span {
+  font-size: 0.6rem;
+  color: white;
+}
+nav {
+ display: flex;
+ gap: 50px;
+}
+
+nav a {
+  font-family: "Iceland", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  transition: color 0.3s;
+  text-shadow: 1px 1px 5px #00ffdd;
+  padding: 20px;
+  border: 0px;
+  border-radius: 30px;
+  transition: 0.5s ease-in-out;
+}
+
+nav a:hover {
+  color: #000000;
+  background-color: #00a2ff;
+  border: 0px;
+  border-radius: 30px;
+  transition: 0.5s;
+  text-shadow: none;
+}
+
+
+/* Styles when the screen is smaller */
+@media (max-width: 768px) {
+  header { justify-content: center; /* Center items horizontally */
+  flex-direction: column;
+  padding: 20px 0px;
+  align-items: center;}
+
+header nav {
+  display: none; /* Hide nav menu */
+  flex-direction: column; /* Stack links vertically */
+  position: absolute; /* Position for animation */
+   top: 100%; /* Place it below the header */
+  left: 0;
+  width: 100%; /* Full width */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background */
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+ header nav a {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+   display: block; /* Full width links */
+   margin: 5px 0;
+}
+
+}
+
+
+
+main {
+  flex: 1; /* Allows main to take up the remaining vertical space */
+  display: flex;
+  justify-content: space-around; /* Distributes space between content and image */
+  align-items: center;
+  padding: 40px;
+  
+}
+.content {
+  max-width: 60%;
+}
+.content h1 {
+  font-family: "Jersey 20", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 128px;
+  letter-spacing: 8px;
+  background: linear-gradient(to right, rgb(4, 134, 254), rgb(33, 208, 145));
+  color: transparent;
+  margin-right: 20px;
+  background-clip: text;
+  display: inline-block;
+  cursor: context-menu;
+  text-shadow: -7px 2px 5px rgba(252, 62, 20, 0.4);
+  transition: text-shadow 0.6s ease;
+  -webkit-animation: focus-in-expand 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.content h1:hover {
+  text-shadow: none;
+}
+.content p {
+  font-family: "Iceland", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  color: #0486FE;
+  font-size: 30px;
+  line-height: 1.8;
+   text-shadow: 1px 1px 5px #00639c;
+   cursor: context-menu;
+   
+}
+.image-container {
+  max-width: 30%;
+}
+
+.image-container img:nth-child(1) {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: rgba( 255, 255, 255, 0.25 );
+  filter: drop-shadow(0 0 0.75rem rgb(182, 42, 42));
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+   transition: 0.5s ease-in-out;
+}
+.image-container img:hover:nth-child(1) {
+  width: 110%;
+  background: rgba(28, 233, 240, 0.25);
+}
+.image-container img {
+  width: 5vh;
+  filter: drop-shadow(0 0 0.75rem rgba(72, 177, 180, 0.534));
+  transition: 0.5s all ease-in-out;
+  margin: 1.5vh;
+}
+.image-container img:hover {
+  width: 6vh;
+  filter: drop-shadow(0 0 0.75rem rgba(180, 85, 72, 0.534));
+
+}
+
+
+.slider-container {
+  width: 100%;
+  max-width: 100vh;
+   position: relative;
+  margin: 20px auto;
+  overflow: hidden; /* Hide overflow images */
+  border-radius: 50px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.slide {
+  flex: 0 0 100%; /* Each slide takes 100% of the container's width */
+  display: flex;
+  position: relative;
+  justify-content: center;
+     align-items: center;
+}
+.slide-text {
+  position: absolute;
+  width: 20%;
+  max-width: 20vh;
+  height: min-content;
+  max-height: 30vh;
+  top: 10%; /* Position at the top */
+  left: 10%; /* Position from left */
+  color: white;
+  padding: 1vh;
+  z-index: 2; /* Ensure text is above image*/
+  background: rgba( 255, 255, 255, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.slide-text h4 {
+  margin-bottom: 5px;
+}
+.slide-text p{
+  font-size: 1rem;
+}
+
+.slide img {
+  width: 100%;
+  height: auto; /* maintains the aspect ratio*/
+  object-fit: contain; /* Scale the image to cover the container without deformation */
+}
+.slider-btn {
+   position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Vertical centering */
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  text-shadow: #000000 -2px 2px 6px;
+  height: 100%;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+
+}
+.slider-btn:hover {
+  background-color: rgba(255, 255, 255, 0.322);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+   right: 10px;
+}
+.tab-container {
+  width: 100%;
+  margin: 20px auto; /* Centering */
+  font-family: "Iceland", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  color: #0486FE;
+ 
+}
+
+.tab-buttons {
+  display: flex;
+   justify-content: center;
+}
+.tab-button {
+  font-family: "Iceland", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+   color: #00fff2;
+  padding: 10px 15px;
+   cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+.tab-button:hover {
+    background-color: #3b6aca;
+    color: #fff;
+}
+.tab-button.active {
+  background-color: #ff59598e; /* Color for the active tab */
+   color: #ffffff;
+}
+
+.tab {
+   display: none; /* Hide all the slider by default */
+}
+.tab.active{
+  display: block; /* Show the current slider */
+}
+
+/* Bottom Menu Styles */
+.bottom-menu {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+    bottom: 0; /* Stick to the bottom */
+    left: 0;
+    width: 100%;
+    box-shadow: #00a2ff -2px -2px 2px;
+    background-color: rgba(0, 0, 0, 0.5); /* Bottom nav background */
+    backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+     border-radius: 40px 40px 0 0; /* Round corners of the menu */
+    padding: 15px 0; /* Adds padding to the container */
+    z-index: 3; /* Ensure it's above other content */
+}
+
+.menu-item {
+    color: #ffffff;
+    font-size: 25px; /* Icon size */
+   text-decoration: none;
+   padding: 20px;
+   padding-right: 30px;
+   padding-left: 30px;
+   border-radius: 20px;
+   transition: 0.5s ease-in-out;
+}
+
+
+
+/* Change the icon color on hover */
+.menu-item:hover {
+  background-color: #00a2ff;
+  border-radius: 20px;
+}
+
+
+@media (max-width: 769px) {
+  main {
+    flex-direction: column; /* Stack elements on smaller screens */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+   .content {
+    max-width: 90%;
+    margin-bottom: 20px; /* Add space below content on smaller screens */
+  }
+    .image-container {
+     max-width: 70%; /* Allow the image to take more width on smaller screens */
+    }
+    
+    .content h1 {
+      font-size: 80px;
+     }
+     .content p {
+      font-size: 20px;
+     }
+     .image-container img:nth-child(1) {
+      width: 70%;
+     }
+     .slide-text {
+      width: 30%;
+     }
+     .slide-text h4 {
+      margin-bottom: 5px;
+      font-size: medium;
+    }
+    .slide-text p{
+      font-size: 1rem;
+      font-size: small;
+    }
+
+}
+
+@media (min-width: 769px) {
+  .bottom-menu {
+    display: none; /* Hide bottom menu on larger screens */
+  }
+}
+
+/* Social media links styles */
+.social-links-container {
+  display: flex;
+  justify-content: center;
+ width: 100%;
+ padding: 20px; /* Add some space around the container */
+}
+.social-links {
+ display: flex;
+ flex-direction: column;
+ align-items: center; /* Center items vertically */
+ background: rgba(255, 255, 255, 0.2);
+ border-radius: 16px;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(5px);
+ -webkit-backdrop-filter: blur(5px);
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ padding: 0px;
+  width: 90%; /* Take up 90% of its container */
+  max-width: 800px;/* Max size of the container */
+  box-sizing: border-box;
+}
+.social-links p {
+ margin-bottom: 10px; /* Add some space below the title */
+ font-weight: bold;
+ font-size: 16px;
+}
+.social-buttons {
+display: flex;
+ justify-content: center;
+ gap: 20px; /* Space between buttons */
+ margin-bottom: 20px;
+}
+
+.social-button {
+ display: flex;
+ align-items: center; /* Center icon vertically */
+ justify-content: center; /* Center icon horizontally */
+ width: 70px; /* Button width */
+ height: 70px;/* Button height */
+ background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(53, 133, 180, 0.3);
+ color: white; /* Make icons white */
+ text-decoration: none; /* Remove underline of links */
+ 
+ transition: 0.5s all ease-in-out;
+}
+
+
+
+.social-button:hover {
+background-color: rgb(22, 82, 247);
+color: #000000;
+box-shadow: 0px 0px 8px 2px rgb(22, 82, 247);
+}
+
+.email {
+   font-size: 10px;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.email a{
+  color: #00fff2;
+  text-decoration: none;
+}
+@media (max-width: 768px){
+  
+.social-links-container{
+     padding: 10px;
+ }
+ .social-links {
+ width: 100%; /* Take up 100% of its container */
+ padding: 15px;
+}
+.social-button {
+  width: 60px;
+ height: 60px;
+ font-size: 14px;
+}
+ .email {
+     font-size: 10px;
+     
+ }
+}
+.copyright-footer {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  background-color: rgba(0, 0, 0, 0.5);
+   padding: 20px 0px;
+  text-align: center;
+   z-index: 2; /* Ensure it's above other content */
+}
+.copyright-footer p {
+    color: #b0c4de;
+      margin: 5px; /* Add some space around the copyright info */
+      font-size: 14px;
+}

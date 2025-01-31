@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+         
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shohab's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Iceland&family=Jersey+20&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="logo.png" alt="My Logo"></a>
+        </div>
+         <nav>
+            <a href="#top">HOME</a>
+            <a href="#projects-section">MY PROJECTS</a>
+            <a href="#contact-section">CONTACT ME</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="content" id="top">
+            <h1>Welcome!</h1>
+            <p>Hello, I'm Shohab. Thank you for taking the time to learn more about me. This website showcases some of the projects I've worked on. Not that I know a lot and want to showcase some of my "masterpieces", no. I created it to have a space that's truly mine. The only way to do great work is to love what you do. I loved doing these. Please feel free to explore and share any feedback you have.</p>
+        </div>
+         <div class="image-container">
+            <img src="profile.png" alt="My Profile Picture"><br>
+           Skills: <br> <img src="photoshop.png" title="Photoshop"><img src="illustrator.png" title="Illustrator"><img src="photoshop-lightroom.png" title="Lightroom"><img src="html.png" title="HTML">
+        <img src="css3.png" title="CSS"><img src="js.png" title="JavaScript"><img src="figma.png" title="Figma"></div>
+      
+    </main>
+    <div class="tab-container" id="projects-section">
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="tab1">Logo designs</button>
+            <button class="tab-button" data-tab="tab2">Figma projects</button>
+            <button class="tab-button" data-tab="tab3">Product designs</button>
+           <button class="tab-button" data-tab="tab4">Jerseys</button>
+        </div>
+        <div class="tab-content">
+          <div class="tab active" id="tab1">
+            <section class="slider-container">
+               <div class="slider">
+                 <div class="slide active">
+                   <div class="slide-text">
+                       <h4>ShowHub</h4>
+                      <p>Official logo.</p>
+                  </div>
+                  <img src="slide1.jpg" alt="Slide 1">
+                 </div>
+                  <div class="slide">
+                  <div class="slide-text">
+                      <h4>Glocalfly</h4>
+                       <p>Official logo.</p>
+                  </div>
+                     <img src="slide2.jpg" alt="Slide 2">
+                 </div>
+                 <div class="slide">
+                     <div class="slide-text">
+                         <h4>Lone Rangers</h4>
+                         <p>Official logo.</p>
+                     </div>
+                  <img src="slide3.jpg" alt="Slide 3">
+                 </div>
+              </div>
+                <button class="slider-btn prev" onclick="prevSlide('tab1')">❮</button>
+              <button class="slider-btn next" onclick="nextSlide('tab1')">❯</button>
+          </section>
+          </div>
+          <div class="tab" id="tab2">
+            <section class="slider-container">
+                 <div class="slider">
+                 <div class="slide active">
+                   <div class="slide-text">
+                       <h4>A Figma Design</h4>
+                      <p>This is just a protoype.</p>
+                  </div>
+                  <img src="slide4.jpg" alt="Slide 4">
+                 </div>
+                 <div class="slide">
+                     <div class="slide-text">
+                          <h4>Not found.</h4>
+                          <p>Soon will be updated.</p>
+                     </div>
+                   <img src="slide5.jpg" alt="Slide 5">
+                </div>
+                 <div class="slide">
+                    <div class="slide-text">
+                      <h4>Not found.</h4>
+                          <p>Soon will be updated.</p>
+                    </div>
+                     <img src="slide6.jpg" alt="Slide 6">
+                 </div>
+              </div>
+                <button class="slider-btn prev" onclick="prevSlide('tab2')">❮</button>
+              <button class="slider-btn next" onclick="nextSlide('tab2')">❯</button>
+           </section>
+          </div>
+            <div class="tab" id="tab3">
+                <section class="slider-container">
+                   <div class="slider">
+                       <div class="slide active">
+                          <div class="slide-text">
+                               <h4>Pran Chocolate Cookies</h4>
+                              <p>Prototype, real product doesn't extist.</p>
+                          </div>
+                         <img src="slide7.jpg" alt="Slide 7">
+                        </div>
+                       <div class="slide">
+                         <div class="slide-text">
+                             <h4>Muffin Cake</h4>
+                             <p>Tried to recreate the Muffin Cake design.</p>
+                          </div>
+                           <img src="slide8.jpg" alt="Slide 8">
+                       </div>
+                       <div class="slide">
+                         <div class="slide-text">
+                          <h4>Not found.</h4>
+                          <p>Soon will be updated.</p>
+                         </div>
+                          <img src="slide9.jpg" alt="Slide 9">
+                      </div>
+                 </div>
+                    <button class="slider-btn prev" onclick="prevSlide('tab3')">❮</button>
+                  <button class="slider-btn next" onclick="nextSlide('tab3')">❯</button>
+                </section>
+              </div>
+            <div class="tab" id="tab4">
+                <section class="slider-container">
+                   <div class="slider">
+                       <div class="slide active">
+                          <div class="slide-text">
+                              <h4>LR Jersey</h4>
+                               <p>Official jersey design of Lone Rangers.</p>
+                          </div>
+                         <img src="slide10.jpg" alt="Slide 10">
+                        </div>
+                        <div class="slide">
+                          <div class="slide-text">
+                            <h4>Not found.</h4>
+                            <p>Soon will be updated.</p>
+                          </div>
+                          <img src="slide11.jpg" alt="Slide 11">
+                         </div>
+                         <div class="slide">
+                           <div class="slide-text">
+                            <h4>Not found.</h4>
+                            <p>Soon will be updated.</p>
+                           </div>
+                         <img src="slide12.jpg" alt="Slide 12">
+                         </div>
+                  </div>
+                    <button class="slider-btn prev" onclick="prevSlide('tab4')">❮</button>
+                  <button class="slider-btn next" onclick="nextSlide('tab4')">❯</button>
+                 </section>
+              </div>
+        </div>
+    </div>
+
+    <section class="social-links-container" id="contact-section">
+      <div class="social-links">
+          <p>Social media links:</p>
+          <div class="social-buttons">
+              <a href="https://www.facebook.com/ashrafulshohab" class="social-button facebook" title="Facebook">
+                <img src="facebook.png" alt="X logo" width="50%">
+              </a>
+             <a href="https://m.me/ashrafulshohab" class="social-button messenger" title="Messenger">
+              <img src="messenger.png" alt="X logo" width="50%">
+             </a>
+               <a href="https://x.com/ashrafulshohab" class="social-button x" title="X">
+                <img src="twitter.png" alt="X logo" width="50%">
+               </a>
+         </div>
+         <p class="email">Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ashrafulshohab.off@gmail.com" title="Write an Email on Gmail">ashrafulshohab.off@gmail.com</a></p>
+      </div>
+  </section>
+  <footer class="copyright-footer">
+    <div class="footer-content">
+     <p>© 2024 My Portfolio. All rights reserved.</p>
+     <p>Designed by <a href="https://www.facebook.com/ashrafulshohab">Ashraful Shohab</a></p>
+    </div>
+  </footer>
+    <footer class="bottom-menu">
+      <a href="#top" class="menu-item">
+          <i class="fas fa-home"></i></a>
+      </a>
+      <a href="#projects-section" class="menu-item">
+          <i class="fas fa-lightbulb"></i>
+      </a>
+      <a href="#contact-section" class="menu-item">
+          <i class="fas fa-user"></i>
+      </a>
+  </footer>
+    <script src="script.js"></script>
+</body>
+</html>
