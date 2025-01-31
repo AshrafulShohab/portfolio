@@ -540,3 +540,7 @@ box-shadow: 0px 0px 8px 2px rgb(22, 82, 247);
       margin: 5px; /* Add some space around the copyright info */
       font-size: 14px;
 }
+.copyright-footer a{
+  color: #0084ff;
+  text-decoration: none;
+}
