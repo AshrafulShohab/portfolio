@@ -59,6 +59,29 @@ function App() {
   
   const revealRef = useRevealOnScroll();
 
+  // Fix for mobile scroll issue: Force scroll to top on mount
+  useEffect(() => {
+    // Disable default browser scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    const resetScroll = () => {
+      window.scrollTo(0, 0);
+      if (mainContainerRef.current) {
+        mainContainerRef.current.scrollTop = 0;
+      }
+    };
+
+    // Immediate reset
+    resetScroll();
+
+    // Delayed reset to handle layout settling or browser paint timing
+    const timer = setTimeout(resetScroll, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     // Optimized mouse handler using Request Animation Frame logic implicitly via direct DOM updates
     // and CSS variables for smooth compositor-driven animations.
@@ -166,7 +189,7 @@ function App() {
   };
 
   return (
-    <div className={`relative w-full h-screen overflow-hidden bg-black ${isHovering ? 'cursor-hover' : ''}`}>
+    <div className={`relative w-full h-[100dvh] overflow-hidden bg-black ${isHovering ? 'cursor-hover' : ''}`}>
       {/* Custom Cursor */}
       <div 
         ref={cursorDotRef}
