@@ -64,49 +64,11 @@
         });
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="/exam/assets/index-2rJBCFTV.js"></script>
+    <script type="module" crossorigin src="/exam/assets/index-CXkdO2re.js"></script>
     <link rel="stylesheet" crossorigin href="/exam/assets/index-BIjO6bgt.css">
   </head>
   <body>
     <div id="root"></div>
-   <script>
-      // Aggressive hack to replace the Navbar SVG icon without rebuilding
-      const observer = new MutationObserver(() => {
-        const svgs = document.querySelectorAll('svg');
-        for (let svg of svgs) {
-          
-          // Traverse up to 3 levels to find the container holding the text
-          let parent = svg.parentElement;
-          let isLogo = false;
-          
-          for (let i = 0; i < 3; i++) {
-            if (parent && parent.textContent.includes('Exam Portal')) {
-              isLogo = true;
-              break;
-            }
-            if (parent) parent = parent.parentElement;
-          }
-
-          // If we found it, swap it!
-          if (isLogo) {
-            const img = document.createElement('img');
-            img.src = '/exam/logo.png'; 
-            
-            // Inherit the exact classes of the old SVG so it fits perfectly
-            img.className = svg.getAttribute('class') || '';
-            img.style.height = '100%';
-            img.style.width = '100%';
-            img.style.minHeight = '28px';
-            img.style.objectFit = 'contain';
-            
-            svg.replaceWith(img);
-            observer.disconnect(); // Stop looking
-            return;
-          }
-        }
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-    </script>
   </body>
 </html>
 
