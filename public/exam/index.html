@@ -69,6 +69,29 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Quick hack to replace the Navbar SVG icon without rebuilding the React app
+      const observer = new MutationObserver(() => {
+        const svgs = document.querySelectorAll('svg');
+        for (let svg of svgs) {
+          // Find the exact SVG that sits next to the "Exam Portal" text
+          if (svg.parentElement && svg.parentElement.textContent.includes('Exam Portal')) {
+            // Create your custom image tag
+            const img = document.createElement('img');
+            img.src = '/exam/logo.png'; // Points to your uploaded logo
+            img.style.height = '32px';  // Matches standard icon height
+            img.style.width = 'auto';
+            img.style.marginRight = '10px';
+            
+            // Swap the golden owl with your custom logo
+            svg.replaceWith(img);
+            observer.disconnect(); // Stop checking once it's done
+            break;
+          }
+        }
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    </script>
   </body>
 </html>
 
