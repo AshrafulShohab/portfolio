@@ -69,24 +69,39 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      // Quick hack to replace the Navbar SVG icon without rebuilding the React app
+   <script>
+      // Aggressive hack to replace the Navbar SVG icon without rebuilding
       const observer = new MutationObserver(() => {
         const svgs = document.querySelectorAll('svg');
         for (let svg of svgs) {
-          // Find the exact SVG that sits next to the "Exam Portal" text
-          if (svg.parentElement && svg.parentElement.textContent.includes('Exam Portal')) {
-            // Create your custom image tag
+          
+          // Traverse up to 3 levels to find the container holding the text
+          let parent = svg.parentElement;
+          let isLogo = false;
+          
+          for (let i = 0; i < 3; i++) {
+            if (parent && parent.textContent.includes('Exam Portal')) {
+              isLogo = true;
+              break;
+            }
+            if (parent) parent = parent.parentElement;
+          }
+
+          // If we found it, swap it!
+          if (isLogo) {
             const img = document.createElement('img');
-            img.src = '/exam/logo.png'; // Points to your uploaded logo
-            img.style.height = '32px';  // Matches standard icon height
-            img.style.width = 'auto';
-            img.style.marginRight = '10px';
+            img.src = '/exam/logo.png'; 
             
-            // Swap the golden owl with your custom logo
+            // Inherit the exact classes of the old SVG so it fits perfectly
+            img.className = svg.getAttribute('class') || '';
+            img.style.height = '100%';
+            img.style.width = '100%';
+            img.style.minHeight = '28px';
+            img.style.objectFit = 'contain';
+            
             svg.replaceWith(img);
-            observer.disconnect(); // Stop checking once it's done
-            break;
+            observer.disconnect(); // Stop looking
+            return;
           }
         }
       });
