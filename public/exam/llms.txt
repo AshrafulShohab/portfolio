@@ -1,0 +1,14 @@
+# ExamHost - Online MCQ Assessment Platform
+
+> Fast, interactive web assessment platform for students and instructors featuring instant grading, real-time timer auto-save, and performance analytics.
+
+## Core Capabilities
+- Public exam exploration by Class, Subject, and Chapter
+- Student ID authenticated results and mastery tracking
+- Real-time exam taking with offline/cloud auto-save protection
+- Teacher admin portal with exam authoring, question management, and student analytics
+
+## URL Endpoints
+- `/`: Public exam catalog and category browser
+- `/my-results`: Student performance analytics and exam scorecards
+- `/admin`: Instructor dashboard and exam manager

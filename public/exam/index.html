@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ExamHost – Online MCQ Exam & Assessment Platform</title>
+
+    <!-- Canonical & SEO Robots -->
+    <link rel="canonical" href="https://shohab.vercel.app/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
     <!-- Favicon & Touch Icons -->
     <link rel="icon" type="image/x-icon" href="/exam/favicon.ico" />
     <link rel="shortcut icon" href="/exam/favicon.ico" />
@@ -11,6 +16,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/exam/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/exam/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/exam/apple-touch-icon.png" />
+    <link rel="manifest" href="/exam/manifest.json" />
+
+    <!-- Google Fonts Non-blocking Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    />
 
     <!-- Primary SEO Meta Tags -->
     <meta name="title" content="ExamHost – Online MCQ Exam & Assessment Platform" />
@@ -20,6 +34,7 @@
     <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Discord -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ExamHost" />
+    <meta property="og:url" content="https://shohab.vercel.app/" />
     <meta property="og:title" content="ExamHost – Online MCQ Exam & Assessment Platform" />
     <meta property="og:description" content="Host MCQ exams with custom options and timers, smart LaTeX/table editor, Gemini AI OCR question paper generator from PDF/images, and teacher analytics." />
     <meta property="og:image" content="/exam/og-image.png" />
@@ -35,6 +50,37 @@
     <meta name="twitter:description" content="Host MCQ exams with custom options and timers, smart LaTeX/table editor, Gemini AI OCR question paper generator from PDF/images, and teacher analytics." />
     <meta name="twitter:image" content="/exam/og-image.png" />
     <meta name="twitter:image:alt" content="ExamHost Platform Thumbnail" />
+
+    <!-- Schema.org JSON-LD Structured Data (Agentic Browsing & Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://shohab.vercel.app/#webapp",
+          "name": "ExamHost",
+          "url": "https://shohab.vercel.app/",
+          "description": "Host MCQ exams with custom options and timers, smart LaTeX/table editor, and teacher analytics.",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires modern JavaScript and HTML5 support",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://shohab.vercel.app/#organization",
+          "name": "ExamHost Education",
+          "url": "https://shohab.vercel.app/",
+          "logo": "https://shohab.vercel.app/logo.png"
+        }
+      ]
+    }
+    </script>
 
     <!-- Dynamic absolute URL resolution for social previews -->
     <script>
@@ -52,7 +98,6 @@
         }
       } catch (e) {}
     </script>
-    <link rel="preload" href="/exam/fonts/kalpurush.ttf" as="font" type="font/ttf" crossorigin />
     <script>
       try {
         const originalFetch = window.fetch;
@@ -64,11 +109,13 @@
         });
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="/exam/assets/index-CXkdO2re.js"></script>
-    <link rel="stylesheet" crossorigin href="/exam/assets/index-BIjO6bgt.css">
+    <script type="module" crossorigin src="/exam/assets/index-CRZ22Oyw.js"></script>
+    <link rel="modulepreload" crossorigin href="/exam/assets/vendor-react-NF5A8vL5.js">
+    <link rel="modulepreload" crossorigin href="/exam/assets/vendor-firebase-CE-Q9ARb.js">
+    <link rel="modulepreload" crossorigin href="/exam/assets/vendor-icons-CpUrOdcH.js">
+    <link rel="stylesheet" crossorigin href="/exam/assets/index-_MuGLso7.css">
   </head>
   <body>
     <div id="root"></div>
   </body>
 </html>
-

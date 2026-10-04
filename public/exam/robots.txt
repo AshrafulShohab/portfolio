@@ -1,0 +1,10 @@
+# Robots.txt for ExamHost
+User-agent: *
+Allow: /
+Allow: /my-results
+Disallow: /admin
+Disallow: /create-exam
+Disallow: /edit-exam/
+Disallow: /dashboard
+
+Sitemap: https://shohab.vercel.app/sitemap.xml
